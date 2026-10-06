@@ -1,16 +1,19 @@
-package com.br.revestu.models;
+package com.br.revestu.marca;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import java.util.UUID;
 
 @Entity
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Produto {
-    private UUID IdPRoduto;
+public class Marca {
+    @Id
+    private String cnpj;
+    private String nivelSustentabilidade;
+
 }

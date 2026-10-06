@@ -1,4 +1,4 @@
-package com.br.revestu.models;
+package com.br.revestu.avaliacao;
 
 public class Avaliacao {
     private

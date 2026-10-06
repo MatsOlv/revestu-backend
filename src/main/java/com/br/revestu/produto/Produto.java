@@ -1,12 +1,9 @@
-package com.br.revestu.models;
-
+package com.br.revestu.produto;
 import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-
 import java.util.UUID;
 
 @Entity
@@ -14,12 +11,6 @@ import java.util.UUID;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-
-public class Ponto {
-    @Id
-    private UUID id;
-    private String nome;
-    private String cepPonto;
-
+public class Produto {
+    private UUID IdPRoduto;
 }
-

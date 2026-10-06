@@ -1,4 +1,4 @@
-package com.br.revestu.models;
+package com.br.revestu.reciclagem;
 
 import jakarta.persistence.Id;
 import java.time.LocalDateTime;

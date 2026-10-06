@@ -1,4 +1,5 @@
-package com.br.revestu.models;
+package com.br.revestu.ponto;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
@@ -6,14 +7,19 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.UUID;
+
 @Entity
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Marca {
+
+public class Ponto {
     @Id
-    private String cnpj;
-    private String nivelSustentabilidade;
+    private UUID id;
+    private String nome;
+    private String cepPonto;
 
 }
+

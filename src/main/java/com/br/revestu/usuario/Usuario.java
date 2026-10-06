@@ -1,5 +1,6 @@
-package com.br.revestu.models;
+package com.br.revestu.usuario;
 
+import com.br.revestu.pessoa.Pessoa;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
@@ -12,7 +13,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Usuario extends Pessoa{
+public class Usuario extends Pessoa {
     @Id
     private String cpf;
     private String nomeUsuario;

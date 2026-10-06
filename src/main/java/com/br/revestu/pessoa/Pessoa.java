@@ -1,4 +1,4 @@
-package com.br.revestu.models;
+package com.br.revestu.pessoa;
 import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

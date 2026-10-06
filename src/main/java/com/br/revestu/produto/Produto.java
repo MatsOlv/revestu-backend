@@ -12,5 +12,5 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Produto {
-    private UUID IdPRoduto;
+    private UUID idPRoduto;
 }

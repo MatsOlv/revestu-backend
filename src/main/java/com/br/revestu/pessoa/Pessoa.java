@@ -16,8 +16,8 @@ public class Pessoa {
     private String idPessoa ;
     private String nome ;
     @Embedded
-    private Endereco Endereco;
+    private Endereco endereco;
     @Embedded
-    private Contato Contato;
+    private Contato contato;
 
 }

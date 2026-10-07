@@ -1,14 +1,14 @@
 package com.br.revestu.reciclagem;
 import com.br.revestu.produto.Produto;
 import com.br.revestu.usuario.Usuario;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToMany;
+import jakarta.persistence.*;
+
 import java.time.LocalDateTime;
 import java.util.UUID;
 
 public class Reciclagem {
     @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
     private String tipoMaterial;
     private LocalDateTime data;

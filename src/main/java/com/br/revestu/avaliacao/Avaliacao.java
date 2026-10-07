@@ -1,10 +1,7 @@
 package com.br.revestu.avaliacao;
 import com.br.revestu.produto.Produto;
 import com.br.revestu.usuario.Usuario;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,6 +15,7 @@ import java.util.UUID;
 @NoArgsConstructor
 public class Avaliacao {
     @Id
+    @GeneratedValue(strategy = GenerationType.UUID)
     private UUID idAvaliacao;
     private String ciclodevida;
     private Double nota;

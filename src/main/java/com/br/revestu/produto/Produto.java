@@ -1,5 +1,6 @@
 package com.br.revestu.produto;
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -12,5 +13,6 @@ import java.util.UUID;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Produto {
-    private UUID idPRoduto;
+    @Id
+    private String idPRoduto;
 }

@@ -22,18 +22,18 @@ public class UsuarioService {
             return usuarioRepository.findById(cpf);
         }
 
-        public Usuario atualizar(String cpf, Usuario usuarioAtualizado) {
+        public Usuario atualizar(String cpf, Usuario Usuario) {
             return usuarioRepository.findById(cpf)
-                    .map(usuarioExistente -> {
-                        usuarioExistente.setNomeUsuario(usuarioAtualizado.getNomeUsuario());
-                        return usuarioRepository.save(usuarioExistente);
+                    .map(usuario -> {
+                        Usuario.setNomeUsuario(usuario.getNomeUsuario());
+                        return usuarioRepository.save(Usuario);
                     })
-                    .orElseThrow(() -> new RuntimeException("Usuário não encontrado com o CPF: " + cpf));
+                    .orElseThrow(() -> new RuntimeException("Usuário com o CPF: " + cpf + " não encontrado "));
         }
 
         public void deletar(String cpf) {
             if (!usuarioRepository.existsById(cpf)) {
-                throw new RuntimeException("Usuário não encontrado com o CPF: " + cpf);
+                throw new RuntimeException("Usuário com o CPF: " + cpf + " não encontrado ");
             }
             usuarioRepository.deleteById(cpf);
         }

@@ -15,7 +15,6 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Embedded
 public class Usuario extends Pessoa {
     @Id
     private String cpf;

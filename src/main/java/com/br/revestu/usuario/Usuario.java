@@ -18,6 +18,7 @@ import java.util.List;
 public class Usuario extends Pessoa {
     @Id
     private String cpf;
+    @Column(unique = true)
     private String nomeUsuario;
 
     @OneToMany(mappedBy = "usuario" )

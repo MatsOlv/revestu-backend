@@ -12,8 +12,6 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Pessoa {
-    @Id
-    private String idPessoa ;
     private String nome ;
     @Embedded
     private Endereco endereco;

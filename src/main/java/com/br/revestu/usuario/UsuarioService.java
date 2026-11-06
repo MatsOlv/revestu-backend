@@ -1,4 +1,5 @@
 package com.br.revestu.usuario;
+import com.br.revestu.Infra.UsuarioJaExisteException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.List;
@@ -10,8 +11,14 @@ public class UsuarioService {
         @Autowired
         private UsuarioRepository usuarioRepository;
 
-        public Usuario salvar(Usuario usuario) {
-            return usuarioRepository.save(usuario);
+        public UsuarioResponse salvar(UsuarioRequest usuario) {
+            if (usuarioRepository.existsById(usuario.cpf()))
+                throw new UsuarioJaExisteException("Usuario já existe!");
+            var usuario1 = usuarioRepository.save(new Usuario(usuario.cpf(),
+                                        usuario.nomeUsuario(),
+                                        null,
+                                        null));
+            return new UsuarioResponse(usuario1.getNomeUsuario());
         }
 
         public List<Usuario> listarTodos() {
